@@ -1,0 +1,62 @@
+<!-- Home 바로 아래 트윗 작성하는 form 파트 -->
+<!-- section: sectioning element 이므로 heading 태그 반드시 필요 -->
+
+<!-- '논리적으로 완결성 있는 집합체'를 묶어줄 경우 div 대신 section을 사용 -->
+<!-- 브라우저에게 '여기는 트윗의 폼을 작성하기 위한 영역'임을 좀 더 뉘앙스를 전달할 수 있음 -->
+
+<section>
+	<h1>What's happening?</h1>
+
+	<!-- 작성되는 내용이 많으므로 POST -->
+	<form action="#" method="POST">
+
+		<!-- 좌측의 유저 프로필 사진 -->
+		<img src="#" alt="@kimbugx" />
+
+		<!-- 트위터는 280자까지 올릴 수 있음 => maxlength -->
+		<textarea placeholder="What's happening?" maxlength="280"></textarea>
+
+		<!-- 파일 업로드 아이콘 -->
+		<!-- input의 경우 기본적으로 style이 안 먹는 태그임 => 따로 style이 먹는 버튼 등으로 만들어줘야 -->
+		<!-- (** 이미지 아이콘들은 전부 aria-label 적어주기) -->
+		<button type="button" aria-label="Upload files">
+			<!-- Icon -->
+		</button>
+		<!-- 파일 여러 개 업로드 속성 => multiple -->
+		<!-- 동영상, 이미지 업로드 속성 => accept에 허용할 파일 확장자 -->
+		<!-- 기본형태: accept="img/png" 또는 ".png" -->
+		<!-- (이미지) 전체 허용: accept="img/*" -->
+		<input type="file" multiple accept="image/*, video/*" />
+
+		<!-- GIF 아이콘 -->
+		<button type="button" aria-label="Search GIFs...">
+			<!-- Icon -->
+		</button>
+
+		<!-- 투표 만들기 아이콘 -->
+		<button type="button" aria-label="Create a poll">
+			<!-- Icon -->
+		</button>
+
+		<!-- 이모지 선택하기 아이콘 -->
+		<button type="button" aria-label="Choose emoji">
+			<!-- Icon -->
+		</button>
+
+		<!-- 입력된 글자 수에 따라 테두리가 채워지는 파란색 원 -->
+		<!-- '입력된 글자 수'라는 정보를 담고 있음 (280자 라는 limit에서 얼마나 작성했는지 보여줌) -->
+		<!-- 	의미적으로 text 정보와 동일 + 텍스트 작성 수는 중요한 정보이니 강조 -->
+		<!-- (파란색 테두리가 천천히 채워지는 건 style쪽 작업) -->
+		<!-- (aria-label에는 아직 아무것도 입력이 안 되었으므로 '280자 중 0자' => 나중에 입력할수록 0이 올라가게 함) -->
+		<strong aria-label="0 out of 280 characters"></strong>
+
+		<!-- 플러스 버튼 (트윗 추가) -->
+		<!-- 누르면 트윗 추가하는 모달창 띄움 => button -->
+		<button type="button" aria-label="Add another tweet">
+			<!-- Icon -->
+		</button>
+
+		<!-- 작성한 트윗 제출 버튼 -->
+		<button type="submit">Tweet</button>
+	</form>
+</section>
