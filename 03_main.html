@@ -1,0 +1,52 @@
+<!-- main: 본문에 있어서 가장 핵심이 되는 contents들을 모두 묶어주는 역할 
+	=> html 문서에서 단 하나만 사용한다! -->
+
+<!-- div 대신 header나 main 같은 태그를 쓰면 의미가 좀 더 부각될 수 있음 (semantic tag) -->
+
+<!-- header vs. main -->
+<!-- header는 다양한 요소(nav, section, div 등)에서 여러 번 사용 가능 -->
+<!-- 즉, 어떤 한 요소의 '도입부'에 해당하는 헤더적 뉘앙스를 살려주기 위해서 언제든지 사용 가능 -->
+<!-- 반면에 main은 본문의 가장 핵심적인 contents들을 묶어줄 때 단 한번만 사용 가능 -->
+<!-- 	=> section, article, aside, nav 등의 태그 안에 main이 올 수는 없음! -->
+
+<!-- header, main, footer가 3단 구성으로 병렬적으로 구성되는 것이 가장 좋다 (= 글의 서론, 본론, 결론) -->
+<!-- main 부터 본격적으로 contents가 시작된다는 것을 알림 (글의 본론이 되는 부분을 모두 묶는 역할) -->
+<!-- 또한 main은 sectioning element는 아니기 때문에 heading(h1, h2) 태그를 반드시 적어줄 필요는 없음 -->
+
+<main>
+	<!-- main의 header 부분 -->
+	<header>
+		<h1>Home</h1>
+
+		<!-- Home 글자 옆의 반짝이 아이콘 => 누르면 드롭다운 뜨므로 button 처리 -->
+		<!-- & 스크린리더에서는 이 아이콘이 뭔지 모름 => aria-label로 설명 -->
+		<button type="button" aria-label="Timeline options">
+			<!-- Icon 이미지 -->
+		</button>
+
+		<!-- 반짝이 아이콘 눌렀을 때 뜨는 드롭다운 메뉴 -->
+		<div>
+			<!-- 두번째 제목 -->
+			<h2>Home shows you top Tweets first</h2>
+
+			<!-- 그 아래 첫번째 항목 - 누르면 설정이 바뀜 (button) -->
+			<button type="button">
+				<!-- Icon -->
+				<!-- top tweet 대신 lates tweet 보여준다는 것 강조(?) -->
+				<strong>
+					See latest Tweets Instead
+				</strong>
+				<!-- 별로 중요하지 않은 짧은 글은 span 태그 (긴 글은 p 태그) -->
+				<span>
+					You'll be switched back Home after you've been away for a while.
+				</span>
+			</button>
+
+			<!-- 두 번째 항목 - 누르면 다른 페이지로 이동 (a 태그) -->
+			<a href="#">
+				<!-- Icon -->
+				View content preferences
+			</a>
+		</div>
+	</header>
+</main>
