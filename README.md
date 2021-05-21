@@ -4,4 +4,8 @@
 
 공부기간: 210520 - 210521
 
-##### 코드가 많을거라고 해서 레포를 따로 분리했으나 실제로는 안 많았음..
+#### 마크업한 페이지
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/flHY1HWCIW.png"  width="40%" height="auto">
+
+#### 마크업 구조
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/eM9GSNg4aL.png"  width="40%" height="auto">
