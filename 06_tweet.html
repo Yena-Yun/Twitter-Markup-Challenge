@@ -1,0 +1,127 @@
+<!-- article: 따로 떼어놓아도 그 안에 요소가 다 들어있어서 독립된 덩어리인 경우 -->
+<!-- section이나 article이나 사실 비슷하지만, 어떤 태그를 사용하던지 간에
+	내가 이 태그를 왜 사용했는지 논리적으로 설명만 할 수 있으면 됨 -->
+<!-- 보통 블로그, 뉴스기사, 피드 등은 article을 관용적으로 사용 -->
+<!-- article도 sectioning element => heading 태그! -->
+<article>
+	<!-- 눈에 안 보이는 제목 -->
+	<h1>A Tweet from 김익명</h1>
+	<!-- 프로필 사진 -->
+	<header>
+		<a href="#">
+			<img src="#" alt="김익명">
+		</a>
+		<!-- h2 또는 strong -->
+		<h2>
+			<a href="#">
+				김익명
+			</a>
+		</h2>
+
+		<!-- key value 형태 : dl 사용 -->
+		<dl>
+			<!-- dl 안에 div 하나 넣고 dt, dd 넣기 -->
+			<div>
+				<!-- dt 부분은 눈에 안 보임 -->
+				<dt>Username</dt>
+				<!-- dd에 화면에 보일 username -->
+				<dd>
+					<a href="#">
+						@anonymouskim
+					</a>
+				</dd>
+			</div>
+			<div>
+				<dt>Posted</dt>
+				<!-- dd에 화면에 보일 username -->
+				<dd>
+					<a href="#">
+						Dec 25th
+					</a>
+				</dd>
+			</div>
+		</dl>
+		<!-- 우측 반짝이 버튼 -->
+		<button type="button" aria-label="Options">
+			<!-- Icon -->
+		</button>
+		<!-- 반짝이 버튼 눌렀을 때 나오는 메뉴들 -->
+		<div>
+			<button type="button">
+				<!-- Icon -->
+				Show less often
+			</button>
+			<button type="button">
+				<!-- Icon -->
+				Embed Tweet
+			</button>
+			<button type="button">
+				<!-- Icon -->
+				Unfollow @anonymouskim
+			</button>
+			<button type="button">
+				<!-- Icon -->
+				Mute @anonymouskim
+			</button>
+			<button type="button">
+				<!-- Icon -->
+				Block @anonymouskim
+			</button>
+			<button type="button">
+				<!-- Icon -->
+				Report Tweet
+			</button>
+		</div>
+	</header>
+
+	<p>
+		영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다.
+		내 삶의 모든 것이 이런 식으로 망해왔다
+	</p>
+
+	<!-- header는 도입부, footer는 하단부 뉘앙스 살림 -->
+	<!-- 꼭 화면의 맨 아래가 아니라 한 section 또는 article의 하단부(좋아요 버튼 등)에 쓸 수도 있음 -->
+	<footer>
+		<button type="button">
+			<!-- 스크린리더에만 보이는 설명 -->
+			<span class="sr-only">Tweet your reply</span>
+			<!-- 댓글이 3개라는 점 강조 + 숫자 3에 대한 aria-label 설명 -->
+			<strong aria-label="3 replies">3</strong>
+		</button>
+		<button type="button">
+			<!-- 스크린리더에만 보이는 설명 -->
+			<span class="sr-only">Retweet</span>
+			<!-- 3명이 리트윗했다는 점 강조 + 숫자 3에 대한 aria-label 설명 -->
+			<strong aria-label="3 retweetee">3</strong>
+			<!-- 누르면 나오는 드롭다운 메뉴는 누르는 버튼과 병렬적으로 div 만든 후 시작 -->
+			<div>
+				<button type="button">
+					Retweet
+				</button>
+				<button type="button">
+					Retweet with comment
+				</button>
+			</div>
+			<!-- 좋아요 버튼 -->
+			<button type="button">
+				<span class="sr-only">Like this tweet</span>
+				<!-- 몇 명이 좋아요 했는지 => 중요한 정보 (강조) -->
+				<strong aria-label="100 people liked">100</strong>
+			</button>
+			<!-- share 버튼 -->
+			<button type="button">
+				<span class="sr-only">Share</span>
+			</button>
+			<div>
+				<button type="button">
+					Send via Direct Message
+				</button>
+				<button type="button">
+					Add Tweet to Bookmarks
+				</button>
+				<button type="button">
+					Copy link to Tweet
+				</button>
+			</div>
+	</footer>
+</article>
